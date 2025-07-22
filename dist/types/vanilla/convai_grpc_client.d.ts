@@ -1,6 +1,6 @@
 import { grpc } from '@improbable-eng/grpc-web';
-import { GetResponseResponse } from '../Proto/service/service_pb';
-import { ActionConfigParamsType } from './types';
+import { GetResponseResponse } from '../../Proto/service/service_pb';
+import { ActionConfigParamsType } from '../shared/types';
 export declare class ConvaiGRPCClient {
     client: grpc.Client<any, any>;
     private feedbackClient;

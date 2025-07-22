@@ -1,17 +1,17 @@
-import { GetResponseResponse } from '../Proto/service/service_pb';
-import { ActionConfigParamsType, ConvaiGRPCClientConfigType } from './types';
-import * as narrativeDesign from './narrativeDesign';
+import { GetResponseResponse } from "../../Proto/service/service_pb";
+import { ActionConfigParamsType, ConvaiGRPCClientConfigType } from "../shared/types";
+import * as narrativeDesign from "./narrativeDesign";
 export interface ConvaiClientParams {
     apiKey: string;
     characterId: string;
-    speaker: string;
     enableAudio: boolean;
-    speakerId: string;
-    sessionId: string;
+    sessionId?: string;
     languageCode?: string;
     enableFacialData?: boolean;
+    narrativeTemplateKeysMap?: Map<string, string>;
     faceModel?: 0 | 1 | 2 | 3;
-    narrativeTemplateKeysMap: Map<string, string>;
+    speaker?: string;
+    speakerId?: string;
     textOnlyResponse?: boolean;
     micUsage?: boolean;
     webstreamUrl?: string;
@@ -34,7 +34,7 @@ export declare class ConvaiClient {
     private disableAudioGeneration;
     private enableFacialData;
     private faceModel;
-    private micUsage?;
+    private micUsage;
     private narrativeTemplateKeysMap;
     private actionConfig;
     convaiConfig: ConvaiGRPCClientConfigType;
