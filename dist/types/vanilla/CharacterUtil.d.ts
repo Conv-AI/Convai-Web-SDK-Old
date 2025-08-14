@@ -1,12 +1,8 @@
-declare class AsyncBlockingQueue<T> {
-    private resolvers;
-    private promises;
-    private _add;
-    enqueue(value: T): void;
-    dequeue(): Promise<T>;
+declare class AsyncBlockingQueue {
+    private queue;
+    constructor();
+    enqueue(t: any): void;
+    dequeue(): any;
     isEmpty(): boolean;
-    isBlocked(): boolean;
-    get length(): number;
-    [Symbol.asyncIterator](): AsyncIterableIterator<T>;
 }
 export { AsyncBlockingQueue };

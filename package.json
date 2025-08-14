@@ -9,8 +9,7 @@
     "interactive web experiences",
     "interactive avatars"
   ],
-  "version": "2.1.6",
-  "homepage": "https://www.convai.com/",
+  "version": "1.2.0",
   "main": "dist/vanilla/umd/convai-web-client.umd.js",
   "module": "dist/react/esm/convai-web-client-react.js",
   "private": false,
@@ -35,9 +34,13 @@
       "types": "./dist/types/vanilla.d.ts"
     }
   },
+  "./proto/*": "./dist/proto/*",
+  "./proto/service/*": "./dist/proto/service/*",
+  "./proto/service/service_pb": "./dist/proto/service/service_pb",
   "files": [
     "dist",
-    "Proto"
+    "Proto",
+    "dist/proto"
   ],
   "scripts": {
     "clean": "rm -rf dist",

@@ -1,10 +1,2 @@
-export { ConvaiClient } from './convai_client';
-export { ConvaiGRPCClient } from './convai_grpc_client';
-export { getDeviceId, generateDeviceId, generateSecureDeviceId, regenerateDeviceId, resetDeviceId, hasDeviceId, getStorageMethod, getDeviceFingerprint, isDeviceFingerprintingAvailable, parseDeviceId } from './deviceId';
-export { AudioRecorder } from './audio_recorder';
-export { audio_reocrder_processor } from './audio_recorder_processor';
-export { AudioPlayer } from './streaming_audio_player';
-export { AsyncBlockingQueue } from './CharacterUtil';
-export { manageClient, setGrpcConfig, generateNewCurrentClient, getCurrentClient } from './manageClients';
-export { getServiceUrls } from './narrativeDesign';
-export type { ConvaiGRPCClientConfigType, ActionConfigParamsType, DeviceIdComponents } from '../shared/types';
+export { ConvaiClient } from "./convai_client";
+export { createOrGetSpeaker, listSpeakers, deleteSpeaker } from "./speaker_api";

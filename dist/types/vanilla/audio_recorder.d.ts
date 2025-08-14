@@ -7,8 +7,8 @@ export declare class AudioRecorder {
     private audioWorkletModule;
     constructor();
     private convertoFloat32ToInt16;
-    start(audioCallback: (buffer: ArrayBuffer) => void): void;
+    start(audioCallback: (buffer: ArrayBuffer) => void): Promise<void>;
     stop(): void;
-    removeMicrophoneAccess(): void;
-    getMicrophoneAccess(): void;
+    endRecording(): void;
+    getSampleRate(): number;
 }
