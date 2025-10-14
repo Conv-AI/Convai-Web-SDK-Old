@@ -9,12 +9,11 @@
     "interactive web experiences",
     "interactive avatars"
   ],
-  "version": "1.2.0",
+  "version": "1.3.0",
   "main": "dist/vanilla/umd/convai-web-client.umd.js",
   "module": "dist/react/esm/convai-web-client-react.js",
-  "private": false,
   "browser": "dist/vanilla/umd/convai-web-client.umd.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/types/src/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -22,25 +21,21 @@
     ".": {
       "import": "./dist/react/esm/convai-web-client-react.js",
       "require": "./dist/vanilla/umd/convai-web-client.umd.js",
-      "types": "./dist/types/index.d.ts"
+      "types": "./dist/types/src/index.d.ts"
     },
     "./react": {
       "import": "./dist/react/esm/convai-web-client-react.js",
-      "types": "./dist/types/react.d.ts"
+      "types": "./dist/types/src/react/index.d.ts"
     },
     "./vanilla": {
       "import": "./dist/vanilla/esm/convai-web-client.js",
       "require": "./dist/vanilla/umd/convai-web-client.umd.js",
-      "types": "./dist/types/vanilla.d.ts"
+      "types": "./dist/types/src/vanilla/index.d.ts"
     }
   },
-  "./proto/*": "./dist/proto/*",
-  "./proto/service/*": "./dist/proto/service/*",
-  "./proto/service/service_pb": "./dist/proto/service/service_pb",
+  "private": false,
   "files": [
-    "dist",
-    "Proto",
-    "dist/proto"
+    "dist"
   ],
   "scripts": {
     "clean": "rm -rf dist",
