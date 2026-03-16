@@ -1,0 +1,30 @@
+export declare class AudioPlayer {
+    private sampleRate;
+    private asyncQueue;
+    private audio;
+    private url;
+    private onPlay;
+    private onStop;
+    private onStateChangeCallback;
+    private isPlaying;
+    private isPaused;
+    private isMuted;
+    private preloading;
+    private currentVolume;
+    constructor(sampleRate: number);
+    private arrayBufferToBase64;
+    preload(): void;
+    addChunk(data: Uint8Array): void;
+    playAudio(): void;
+    private playNextQueuedAudio;
+    pauseAudio(): void;
+    resumeAudio(): void;
+    getVolume(): number;
+    setAudioVolume(volume: number): void;
+    toggleAudioVolume(): void;
+    stopAudio(): void;
+    private notifyStateChange;
+    onPlayStart(fn: () => void): void;
+    onPlayStop(fn: () => void): void;
+    onStateChange(fn: (state: string) => void): void;
+}
